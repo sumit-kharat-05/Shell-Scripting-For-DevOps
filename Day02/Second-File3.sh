@@ -1,19 +1,24 @@
 #!/bin/bash
+ 
 
+# IF , ELIF & ELSE
+# FUNCTION
 
-#for ((num=1;num<=5;num++))
-#do
-#	echo "SUMIT KHARAT"
-#done
+function is_accuracy {
 
+read -p "India Against Whose team for next match: " Opponent
+read -p "India Against Whose team for previous Match: " Previous
+if [[ $Opponent == "England" ]];
+then
+	echo "True"
+elif [[ $Previous == "West Indies" ]]
+then
+	echo "Correct"
+else
+	echo "False"
+fi
+}
 
-<<comment
-1 is argument 1 whuch is folder name
-2 is start range
-3 is end range
-comment
+#FUNCTION CALLING
 
-for((num=$1;num<=$3;num++))
-do
-	mkdir "$1$num"
-done
+is_accuracy

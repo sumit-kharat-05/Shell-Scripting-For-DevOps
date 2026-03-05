@@ -1,14 +1,11 @@
 #!/bin/bash
 
+#VARIABLE
 
-read -p "Enter Username:" username
+read -p "Enter username: " username
 
-echo "you enterd $username"
+echo "you entered $username"
 
 sudo useradd -m $username
 
 echo "New User Added"
-
-sudo userdel -m $username
-
-echo "Previously Created User Delete"
